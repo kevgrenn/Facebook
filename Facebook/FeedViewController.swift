@@ -11,13 +11,44 @@ import UIKit
 class FeedViewController: UIViewController {
     @IBOutlet weak var feedScroll: UIScrollView!
     @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var loadingIndicator: UIActivityIndicatorView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
         feedScroll.contentSize = imageView.image!.size
         // Do any additional setup after loading the view.
     }
-
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        imageView.hidden = true
+        loadingIndicator.startAnimating()
+        
+        
+    }
+    
+    
+    func delay(delay:Double, closure:()->()) {
+        dispatch_after(
+            dispatch_time(
+                DISPATCH_TIME_NOW,
+                Int64(delay * Double(NSEC_PER_SEC))
+            ),
+            dispatch_get_main_queue(), closure)
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        delay(2, closure: { () -> () in
+        
+            self.imageView.hidden = false
+            
+            self.loadingIndicator.stopAnimating()
+            
+        })
+        
+    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

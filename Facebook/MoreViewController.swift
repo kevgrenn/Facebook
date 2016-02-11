@@ -24,6 +24,33 @@ class MoreViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    @IBAction func logOutButton(sender: AnyObject) {
+        
+        let alertController = UIAlertController(title: "", message: "Are you sure you want to Log Out", preferredStyle: .ActionSheet)
+        
+        let logOutAction = UIAlertAction(title: "Log Out", style: .Destructive) { (action) in
+            
+        }
+        
+        alertController.addAction(logOutAction)
+        
+        let cancelAction = UIAlertAction(title: "Cancel", style: .Cancel) { (action) in
+            
+        }
+        
+        alertController.addAction(cancelAction)
+        
+        presentViewController(alertController, animated: true) {
+            
+            
+        }
+
+        
+        
+        
+        
+        
+    }
 
     /*
     // MARK: - Navigation
