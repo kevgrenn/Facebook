@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7C064DEB1C86B1ED00231CD7 /* BaseTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C064DE91C86B1ED00231CD7 /* BaseTransition.swift */; };
+		7C064DEC1C86B1ED00231CD7 /* FadeTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C064DEA1C86B1ED00231CD7 /* FadeTransition.swift */; };
+		7C064DEE1C86B20900231CD7 /* LigthboxTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C064DED1C86B20900231CD7 /* LigthboxTransition.swift */; };
 		7C0BF1D11C62F7CF00B7CD84 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C0BF1D01C62F7CF00B7CD84 /* AppDelegate.swift */; };
 		7C0BF1D31C62F7CF00B7CD84 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C0BF1D21C62F7CF00B7CD84 /* ViewController.swift */; };
 		7C0BF1D61C62F7CF00B7CD84 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7C0BF1D41C62F7CF00B7CD84 /* Main.storyboard */; };
@@ -25,6 +28,7 @@
 		7C0BF20F1C630F0F00B7CD84 /* checkinViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C0BF20E1C630F0F00B7CD84 /* checkinViewController.swift */; };
 		7C4EAE281C6C338700E1FC8F /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C4EAE271C6C338700E1FC8F /* Common.swift */; };
 		7C4EAE2A1C6C339A00E1FC8F /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C4EAE291C6C339A00E1FC8F /* LoginViewController.swift */; };
+		7CA3263C1C856F4500B6F848 /* PhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CA3263B1C856F4500B6F848 /* PhotoViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +49,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7C064DE91C86B1ED00231CD7 /* BaseTransition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseTransition.swift; sourceTree = "<group>"; };
+		7C064DEA1C86B1ED00231CD7 /* FadeTransition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FadeTransition.swift; sourceTree = "<group>"; };
+		7C064DED1C86B20900231CD7 /* LigthboxTransition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LigthboxTransition.swift; sourceTree = "<group>"; };
 		7C0BF1CD1C62F7CF00B7CD84 /* Facebook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Facebook.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7C0BF1D01C62F7CF00B7CD84 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7C0BF1D21C62F7CF00B7CD84 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -69,6 +76,7 @@
 		7C0BF20E1C630F0F00B7CD84 /* checkinViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = checkinViewController.swift; sourceTree = "<group>"; };
 		7C4EAE271C6C338700E1FC8F /* Common.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
 		7C4EAE291C6C339A00E1FC8F /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		7CA3263B1C856F4500B6F848 /* PhotoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,7 +132,11 @@
 				7C0BF1D01C62F7CF00B7CD84 /* AppDelegate.swift */,
 				7C0BF1D21C62F7CF00B7CD84 /* ViewController.swift */,
 				7C0BF1D41C62F7CF00B7CD84 /* Main.storyboard */,
+				7CA3263B1C856F4500B6F848 /* PhotoViewController.swift */,
 				7C4EAE291C6C339A00E1FC8F /* LoginViewController.swift */,
+				7C064DE91C86B1ED00231CD7 /* BaseTransition.swift */,
+				7C064DED1C86B20900231CD7 /* LigthboxTransition.swift */,
+				7C064DEA1C86B1ED00231CD7 /* FadeTransition.swift */,
 				7C0BF20C1C630F0500B7CD84 /* photosViewController.swift */,
 				7C0BF20E1C630F0F00B7CD84 /* checkinViewController.swift */,
 				7C0BF20A1C630DB500B7CD84 /* StatusViewController.swift */,
@@ -293,16 +305,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				7C0BF2031C62FFAE00B7CD84 /* RequestsViewController.swift in Sources */,
+				7C064DEB1C86B1ED00231CD7 /* BaseTransition.swift in Sources */,
 				7C0BF2071C62FFC600B7CD84 /* MessagesViewController.swift in Sources */,
 				7C0BF1D31C62F7CF00B7CD84 /* ViewController.swift in Sources */,
 				7C0BF2011C62FFA600B7CD84 /* MoreViewController.swift in Sources */,
 				7C4EAE281C6C338700E1FC8F /* Common.swift in Sources */,
 				7C0BF2051C62FFB700B7CD84 /* NotificationsViewController.swift in Sources */,
 				7C0BF20D1C630F0500B7CD84 /* photosViewController.swift in Sources */,
+				7C064DEE1C86B20900231CD7 /* LigthboxTransition.swift in Sources */,
 				7C0BF1FF1C62FF9100B7CD84 /* FeedViewController.swift in Sources */,
 				7C0BF2091C63097A00B7CD84 /* thrillistViewController.swift in Sources */,
+				7C064DEC1C86B1ED00231CD7 /* FadeTransition.swift in Sources */,
 				7C0BF20F1C630F0F00B7CD84 /* checkinViewController.swift in Sources */,
 				7C0BF20B1C630DB500B7CD84 /* StatusViewController.swift in Sources */,
+				7CA3263C1C856F4500B6F848 /* PhotoViewController.swift in Sources */,
 				7C4EAE2A1C6C339A00E1FC8F /* LoginViewController.swift in Sources */,
 				7C0BF1D11C62F7CF00B7CD84 /* AppDelegate.swift in Sources */,
 			);

@@ -8,21 +8,26 @@
 
 import UIKit
 
-class FeedViewController: UIViewController {
+class FeedViewController: UIViewController{
+    
     @IBOutlet weak var feedScroll: UIScrollView!
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var loadingIndicator: UIActivityIndicatorView!
+    var photoView: UIImageView!
+    var lightboxTransition: LigthboxTransition!
 
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         feedScroll.contentSize = imageView.image!.size
+        lightboxTransition = LigthboxTransition()
         // Do any additional setup after loading the view.
     }
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
         
-        imageView.hidden = true
-        loadingIndicator.startAnimating()
+    //    imageView.hidden = true
+   //     loadingIndicator.startAnimating()
         
         
     }
@@ -40,29 +45,25 @@ class FeedViewController: UIViewController {
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
         
-        delay(2, closure: { () -> () in
-        
-            self.imageView.hidden = false
-            
-            self.loadingIndicator.stopAnimating()
-            
-        })
-        
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    }
+   
+    @IBAction func photoTap(sender: UITapGestureRecognizer) {
+        photoView = sender.view as! UIImageView
+        performSegueWithIdentifier("photoSegue", sender: self)
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
+        let destinationVC = segue.destinationViewController as! PhotoViewController
+        destinationVC.image = self.photoView.image
+        destinationVC.modalPresentationStyle = UIModalPresentationStyle.Custom
+        destinationVC.transitioningDelegate = lightboxTransition
+        
     }
     
 
-    /*
-    // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

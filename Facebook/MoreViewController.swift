@@ -44,11 +44,7 @@ class MoreViewController: UIViewController {
             
             
         }
-
-        
-        
-        
-        
+  
         
     }
 
